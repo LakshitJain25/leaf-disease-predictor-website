@@ -1,0 +1,105 @@
+.predict-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left:7rem;
+  padding-right:7rem;
+  justify-content: space-between;
+}
+
+.file-upload-container {
+  width: 430px;
+  border:2px solid var(--color_4);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+}
+
+.file-form-heading {
+  width: 100%;
+  color: var(--color_4);
+  font-size: 37px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: 600;
+  text-align: center;
+}
+
+.predict-container form {
+  height: 220px;
+  display: flex;
+  cursor: pointer;
+  padding: 0 2rem;
+  gap:5px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dashed var(--color_4);
+  cursor: default;
+}
+
+.predict-container form input {
+  text-align: center;
+  display: none;
+}
+.predict-container form label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+
+  color: var(--color_4);
+  font-size: 50px;
+}
+
+.predict-container form label p {
+  cursor: pointer;
+  color: var(--color_4);
+  font-size: 15px;
+}
+
+.file-form p {
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.predict-btn {
+  width: 100px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  background-color: var(--color_4);
+  color: white;
+  padding: 2px 0px;
+  border: none;
+  transition: 0.15s ease;
+}
+.file-form .filename{
+  font-size:15px;
+}
+.predict-btn:hover {
+  color: var(--color_4);
+  background-color: white;
+  padding: 1px 0; 
+  border: 1px solid var(--color_4);
+}
+
+
+/* ===================================================================================================== */
+
+.instructions-container {
+  width: 430px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+}

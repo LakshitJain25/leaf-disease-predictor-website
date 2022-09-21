@@ -1,23 +1,53 @@
-import logo from './logo.svg';
+import { AnimatePresence } from 'framer-motion';
+import { Routes, Route, BrowserRouter, useLocation } from 'react-router-dom'
 import './App.css';
-
+import HomePage from './pages/HomePage/HomePage';
+import PredictPage from './pages/PredictPage/PredictPage';
 function App() {
+  const pageVariants = {
+    in: {
+      opacity: 1,
+      // x: 0,
+      // rotate: "0deg",
+      transform: "perspective(100px) translateZ(0px)",
+      transition: {
+        duration: 0.7
+      }
+
+    },
+    out: {
+      opacity: 0.3,
+      // x: "-100%",
+      // rotate: "200deg",
+      transform: "perspective(100px) translateZ(-10px)",
+      transition: {
+        duration: 0.7
+      }
+    },
+    exit: {
+      transform: "perspective(100px) translateZ(20px)",
+      opacity: 0,
+      transition: {
+        duration: 0.7
+      }
+    }
+  }
+
+  const pageTransition = {
+    type: "spring",
+    stiffness: 100
+  }
+  const location = useLocation()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="grid-container">
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<HomePage variants={pageVariants} transition={pageTransition} />} />
+            <Route path="/predict" element={<PredictPage variants={pageVariants} transition={pageTransition} />} />
+          </Routes>
+        </AnimatePresence>
+      </div>
     </div>
   );
 }

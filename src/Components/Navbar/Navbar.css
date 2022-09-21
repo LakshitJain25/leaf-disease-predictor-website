@@ -1,0 +1,40 @@
+.navbar-container{
+    position: fixed;
+    top:0;
+    height: max-content;
+    justify-content: space-between;
+    padding:1.3rem 7rem;
+    left:0;
+    display: flex;
+    width:100vw;
+    z-index: 10;
+}
+
+.navbar-container h3{
+    color:var(--color_3);
+    font-size: 32px;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+.navbar-container h3 span{
+    color:var(--color_4);
+}
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+    color:rgb(26, 26, 26);
+    gap:3.5rem;
+    font-size:20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+
+.navbar ul li{
+    color: rgb(26, 26, 26);
+}
