@@ -79,9 +79,6 @@
   border: none;
   transition: 0.15s ease;
 }
-.file-form .filename{
-  font-size:15px;
-}
 .predict-btn:hover {
   color: var(--color_4);
   background-color: white;
@@ -89,6 +86,9 @@
   border: 1px solid var(--color_4);
 }
 
+.file-form .filename{
+  font-size:15px;
+}
 
 /* ===================================================================================================== */
 

@@ -3,11 +3,12 @@
     top:0;
     height: max-content;
     justify-content: space-between;
-    padding:1.3rem 7rem;
+    padding:0.63rem 7rem;
     left:0;
     display: flex;
     width:100vw;
     z-index: 10;
+    /* background-color: white; */
 }
 
 .navbar-container h3{
