@@ -37,7 +37,7 @@ const Navbar = () => {
                         style={{ textDecoration: "none", color: " rgb(26, 26, 26)" }} ><li className='navbar-item'>Market</li></Link>
                     <Link to="/cargo"
                         style={{ textDecoration: "none", color: " rgb(26, 26, 26)" }} ><li className='navbar-item'>Cargo</li></Link>
-                    <Link to="/"
+                    <Link to="/aboutus"
                         style={{ textDecoration: "none", color: " rgb(26, 26, 26)" }} ><li className='navbar-item'>About Us</li></Link>
                 </ul>
             </nav>
