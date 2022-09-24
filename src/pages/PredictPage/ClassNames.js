@@ -34,32 +34,59 @@ const class_names = [
     'Tomato___Tomato_mosaic_virus',
     'Tomato___healthy'
 ]
+const class_mappings = [
+    {
+        name: "Apple",
+        startingIndex: 0,
+        endingIndex: 3
+    },
+    {
+        name: "Cherry",
+        startingIndex: 4,
+        endingIndex: 5
+    },
+    {
+        name: "Corn",
+        startingIndex: 6,
+        endingIndex: 9
+    },
+    {
+        name: "Grape",
+        startingIndex: 10,
+        endingIndex: 13
+    },
+    {
+        name: "Peach",
+        startingIndex: 14,
+        endingIndex: 15
+    },
+    {
+        name: "Pepper",
+        startingIndex: 16,
+        endingIndex: 17
+    },
+    {
+        name: "Potato",
+        startingIndex: 18,
+        endingIndex: 20
+    },
+    {
+        name: "Orange",
+        startingIndex: 21,
+        endingIndex: 21
+    },
+    {
+        name: "Strawberry",
+        startingIndex: 22,
+        endingIndex: 23
+    },
+    {
+        name: "Tomato",
+        startingIndex: 24,
+        endingIndex: 33
+    }
 
-// ============PREDICTION==============
-// [
-//     {
-//         name: "Apple",
-//         startingIndex: 0,
-//         endingIndex: 4
-//     },
-//     {
-//         name: "Apple",
-//         startingIndex: 0,
-//         endingIndex: 4
-//     }
 
-// ]
-// ===========FIXES==============
-// [
-//     {
-//         name: "Potta",
-//         fixes: [
-//             "dniwfen", "nfwini"
-//         ]
-//     },
-//     {
+]
 
-//     }
-// ]
-
-export default class_names
+export { class_names, class_mappings }

@@ -1,41 +1,32 @@
 import React, { useEffect, useState } from 'react'
-import './MarketPage.css'
-import Navbar from './../../Components/Navbar/Navbar';
-import Card from './../../Components/Card/Card';
-import ProductInputModal from './../../Components/ProductInputModal/ProductInputModal';
+import './CargoPage.css'
+import Navbar from '../../Components/Navbar/Navbar';
+import Card from '../../Components/Card/Card';
+import CargoInputModal from '../../Components/CargoInputModal/CargoInputModal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle, faXmarkCircle } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import axios from 'axios';
-import ProductShowModal from './../../Components/ProductShowModal/ProductShowModal';
-const MarketPage = ({ variants, transition }) => {
-    // const options = [
-    //     { value: 'manure', label: 'manure' },
-    //     { value: 'crops', label: 'crops' }
-    // ]
-    // const dropdownStyles = {
-    //     background: "white",
-    //     letterSpacing: "2px",
-    //     width: "400px",
-    //     border: "2px solid #314e2e"
-    // }
+import ProductShowModal from '../../Components/ProductShowModal/ProductShowModal';
+const CargoPage = ({ variants, transition }) => {
+
     const [showInput, setShowInput] = useState(false)
     const [showOutput, setShowOutput] = useState(null)
-    const [products, setProducts] = useState([])
-    const base_url = "https://farmey-server.herokuapp.com/"
-    // const base_url = "http://localhost:8080/"
+    const [cargos, setCargos] = useState([])
+    // const base_url = "https://farmey-server.herokuapp.com/"
+    const base_url = "http://localhost:8080/"
 
     useEffect(() => {
-        const getProducts = async () => {
+        const getCargos = async () => {
             try {
-                const { data } = await axios.get(base_url+'api/product/fetch')
-                setProducts(data)
+                const { data } = await axios.get(base_url + 'api/Cargo/fetch')
+                setCargos(data)
             }
             catch (e) {
                 console.log(e)
             }
         }
-        getProducts()
+        getCargos()
     }, [])
 
     return (
@@ -46,20 +37,16 @@ const MarketPage = ({ variants, transition }) => {
             </div>
             <div className='market-mega-container'>
                 <Navbar />
-                {showInput && <ProductInputModal setShow={setShowInput} />}
+                {showInput && <CargoInputModal setShow={setShowInput} />}
                 <motion.div className="market-container"
                     initial="out"
                     animate="in"
                     exit="exit"
                     variants={variants}
                     transition={transition}>
-                    {/* <div className="dropdown-container">
-                        Filters
-                        <Select options={options} style={dropdownStyles} searchable={false} color="#314e2e" />
-                    </div> */}
                     <div className="cards-container">
                         {
-                            products.map((product, index) => {
+                            cargos.map((product, index) => {
                                 return (<Card product={product} key={product._id} setShowOutput={setShowOutput} />)
                             })
                         }
@@ -70,4 +57,4 @@ const MarketPage = ({ variants, transition }) => {
     )
 }
 
-export default MarketPage
+export default CargoPage

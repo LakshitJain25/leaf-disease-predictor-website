@@ -8,7 +8,7 @@ const LoadingBar = () => {
                     <circle id="test" cx="40" cy="40" r="32"></circle>
                 </svg>
             </div>
-            <h3 className="loader-text">PROCESSING PLEASE WAIT..</h3>
+            <h3 className="loader-text">PLEASE WAIT..</h3>
         </div>
     )
 }

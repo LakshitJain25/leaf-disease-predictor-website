@@ -1,6 +1,7 @@
 import { AnimatePresence } from 'framer-motion';
-import { Routes, Route, BrowserRouter, useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import './App.css';
+import CargoPage from './pages/CargoPage/CargoPage';
 import HomePage from './pages/HomePage/HomePage';
 import MarketPage from './pages/MarketPage/MarketPage';
 import PredictPage from './pages/PredictPage/PredictPage';
@@ -47,6 +48,7 @@ function App() {
             <Route path="/" element={<HomePage variants={pageVariants} transition={pageTransition} />} />
             <Route path="/predict" element={<PredictPage variants={pageVariants} transition={pageTransition} />} />
             <Route path="/market" element={<MarketPage variants={pageVariants} transition={pageTransition} />} />
+            <Route path="/cargo" element={<CargoPage variants={pageVariants} transition={pageTransition} />} />
           </Routes>
         </AnimatePresence>
       </div>

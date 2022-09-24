@@ -8,6 +8,7 @@
     flex-direction: column;
     gap: 50px;
     display: flex;
+    z-index:15;
     justify-content: center;
     align-items: center;
     animation: fadeIn 0.6s ease;
