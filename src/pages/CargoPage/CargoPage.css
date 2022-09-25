@@ -1,3 +1,8 @@
+.market-mega-container{
+    /* background-image: url("https://static.sadhguru.org/d/46272/1633185367-1633185366613.jpg"); */
+    background-size: cover;
+}
+
 .market-container {
     min-height: 100vh;
     display: flex;

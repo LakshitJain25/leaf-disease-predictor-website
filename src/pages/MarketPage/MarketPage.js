@@ -29,6 +29,7 @@ const MarketPage = ({ variants, transition }) => {
         const getProducts = async () => {
             try {
                 const { data } = await axios.get(base_url+'api/product/fetch')
+                console.log(data)
                 setProducts(data)
             }
             catch (e) {
@@ -46,7 +47,7 @@ const MarketPage = ({ variants, transition }) => {
             </div>
             <div className='market-mega-container'>
                 <Navbar />
-                {showInput && <ProductInputModal setShow={setShowInput} />}
+                {showInput && <ProductInputModal setShow={setShowInput} setProducts = {setProducts} products={products}/>}
                 <motion.div className="market-container"
                     initial="out"
                     animate="in"

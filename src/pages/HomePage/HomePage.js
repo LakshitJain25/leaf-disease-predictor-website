@@ -16,7 +16,7 @@ const HomePage = ({ variants, transition }) => {
                 transition={transition}>
                 <div className="left-side">
                     <h1 className="homepage-heading">Proper greening & smart solutions</h1>
-                    <p className='homepage-tagline'>Moving towards a better future by bringing in the change bla bla bla</p>
+                    <p className='homepage-tagline'>A Portal to help farmers practice farming in a more sustainable manner</p>
                     <div className="buttons-container">
                         <Link to="predict"><button className="disease">Predict Disease</button></Link>
                         <Link to="market"><button className="marker">Market</button></Link>

@@ -5,7 +5,7 @@ import DatePicker from 'react-date-picker'
 import { faX } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios'
 import LoadingBar from './../LoadingBar/LoadingBar';
-const ProductInputModal = ({ setShow }) => {
+const ProductInputModal = ({ setShow, setProducts, products }) => {
   const [imageFile, setImageFile] = useState(null)
   const [image, setImage] = useState(null)
   const [date, setDate] = useState(new Date())
@@ -62,7 +62,8 @@ const ProductInputModal = ({ setShow }) => {
 
     }
     setLoading(false)
-    await axios.post(base_url + "api/product/upload", dataToSend)
+    const { data } = await axios.post(base_url + "api/product/upload", dataToSend)
+    setProducts([...products, data])
     setShow(false)
   }
 

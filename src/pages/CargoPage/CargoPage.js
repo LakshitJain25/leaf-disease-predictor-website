@@ -38,7 +38,7 @@ const CargoPage = ({ variants, transition }) => {
             </div>
             <div className='market-mega-container'>
                 <Navbar />
-                {showInput && <CargoInputModal setShow={setShowInput} />}
+                {showInput && <CargoInputModal setShow={setShowInput} setCargos={setCargos} cargos={cargos}/>}
                 <motion.div className="market-container"
                     initial="out"
                     animate="in"

@@ -5,11 +5,11 @@ import DatePicker from 'react-date-picker'
 import { faX } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios'
 import LoadingBar from '../LoadingBar/LoadingBar';
-const CargoInputModal = ({ setShow }) => {
+const CargoInputModal = ({ setShow, setCargos, cargos }) => {
   const [date, setDate] = useState(new Date())
   const [loading, setLoading] = useState(false)
-    const base_url = "https://farmey-server.herokuapp.com/"
-    // const base_url = "http://localhost:8080/"
+  const base_url = "https://farmey-server.herokuapp.com/"
+  // const base_url = "http://localhost:8080/"
 
   const uploadForm = async (e) => {
     // console.log(e)
@@ -20,7 +20,8 @@ const CargoInputModal = ({ setShow }) => {
       dataToSend[field] = e.target[index].value
     })
     setLoading(false)
-    await axios.post(base_url+"api/cargo/upload", dataToSend)
+    const { data } = await axios.post(base_url + "api/cargo/upload", dataToSend)
+    setCargos([...cargos, data])
     setShow(false)
   }
 
