@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloudArrowUp, faLeaf, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 import './PredictPage.css'
 import { class_names, class_mappings } from './ClassNames';
+import Fixes from './Fixes'
 import * as tf from '@tensorflow/tfjs'
 
 import Navbar from './../../Components/Navbar/Navbar';
@@ -13,6 +14,7 @@ const PredictPage = ({ variants, transition }) => {
     const [image, setImage] = useState(null)
     const [model, setModel] = useState(null)
     const [prediction, setPrediction] = useState(null)
+    const [fixes, setFixes] = useState([])
     const [processing, setProcessing] = useState(false)
     const [plant, setPlant] = useState({ value: 'Apple', label: 'Apple' })
 
@@ -43,7 +45,7 @@ const PredictPage = ({ variants, transition }) => {
             }
         }
         loadModel()
-    }, [model])
+    }, [])
 
 
     const readImage = (file) => {
@@ -76,7 +78,13 @@ const PredictPage = ({ variants, transition }) => {
                 })
                 const maxInd = await tf.argMax(preds, 0).data()
                 const predictionIndex = startingIndex + maxInd[0]
-                setPrediction(class_names[predictionIndex])
+                const my_prediction = class_names[predictionIndex]
+                setPrediction(my_prediction)
+                Fixes.forEach((fix) => {
+                    if (fix.name === my_prediction) {
+                        setFixes(fix.fixes)
+                    }
+                })
             }
         }
         catch (e) {
@@ -89,13 +97,15 @@ const PredictPage = ({ variants, transition }) => {
         <div
             className="predict-mega-container">
             <Navbar />
+            <div className="loading-container">
+                {processing && <LoadingBar />}
+            </div>
             <motion.div className='predict-container'
                 initial="out"
                 animate="in"
                 exit="exit"
                 variants={variants}
                 transition={transition}>
-                {processing && <LoadingBar />}
                 <div className="file-upload-container">
                     <h2 className="file-form-heading">Upload Your Image!</h2>
                     <div className="dropdown-container">
@@ -132,6 +142,16 @@ const PredictPage = ({ variants, transition }) => {
                             :
                             <div className="prediction-steps">
                                 <p className='steps-heading'>Here are some fixes you can try:</p>
+                                {fixes.length > 0 &&
+                                    <ul className="steps-container">
+                                        {
+                                            fixes.map((fix) => {
+                                                return (
+                                                    <li className="steps-item">{fix}</li>
+                                                )
+                                            })
+                                        }
+                                    </ul>}
                             </div>
                         }
                     </div>
@@ -139,7 +159,7 @@ const PredictPage = ({ variants, transition }) => {
                         <h2 className="instructions-heading">Instructions</h2>
                         <div className="instructions-list">
                             <p className="instruction-item">1. PLUCK THE INFECTED LEAF FROM THE PLANT.</p>
-                            <p className="instruction-item">2. PLACE IT ON A FLAT SURFACE (TABLE) AND CLICK A PICTURE</p>
+                            <p className="instruction-item">2. PLACE IT ON A FLAT SURFACE (TABLE) AND CLICK A <strong>CLEAR</strong> PICTURE</p>
                             <div className="example">
                                 <h3>Example</h3>
                                 <img src="./images/example.jpg" alt="" />

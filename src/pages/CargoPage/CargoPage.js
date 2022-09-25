@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import './CargoPage.css'
 import Navbar from '../../Components/Navbar/Navbar';
-import Card from '../../Components/Card/Card';
+import CargoCard from '../../Components/CargoCard/CargoCard';
 import CargoInputModal from '../../Components/CargoInputModal/CargoInputModal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle, faXmarkCircle } from '@fortawesome/free-solid-svg-icons';
+import { Store as NotiStore } from 'react-notifications-component';
 import { motion } from 'framer-motion';
 import axios from 'axios';
-import ProductShowModal from '../../Components/ProductShowModal/ProductShowModal';
+import CargoShowModal from '../../Components/CargoShowModal/CargoShowModal';
 const CargoPage = ({ variants, transition }) => {
 
     const [showInput, setShowInput] = useState(false)
@@ -31,7 +32,7 @@ const CargoPage = ({ variants, transition }) => {
 
     return (
         <>
-            {showOutput && <ProductShowModal id={showOutput} setShow={setShowOutput} />}
+            {showOutput && <CargoShowModal id={showOutput} setShow={setShowOutput} />}
             <div className="productInputToggle" onClick={() => { setShowInput(!showInput) }}>
                 {showInput ? <FontAwesomeIcon icon={faXmarkCircle} /> : <FontAwesomeIcon icon={faPlusCircle} />}
             </div>
@@ -46,8 +47,8 @@ const CargoPage = ({ variants, transition }) => {
                     transition={transition}>
                     <div className="cards-container">
                         {
-                            cargos.map((product, index) => {
-                                return (<Card product={product} key={product._id} setShowOutput={setShowOutput} />)
+                            cargos.map((cargo, index) => {
+                                return (<CargoCard cargo={cargo} key={cargo._id} setShowOutput={setShowOutput} />)
                             })
                         }
                     </div>

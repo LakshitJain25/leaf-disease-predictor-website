@@ -41,18 +41,18 @@ function App() {
   }
   const location = useLocation()
   return (
-    <div className="container">
-      <div className="grid-container">
-        <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<HomePage variants={pageVariants} transition={pageTransition} />} />
-            <Route path="/predict" element={<PredictPage variants={pageVariants} transition={pageTransition} />} />
-            <Route path="/market" element={<MarketPage variants={pageVariants} transition={pageTransition} />} />
-            <Route path="/cargo" element={<CargoPage variants={pageVariants} transition={pageTransition} />} />
-          </Routes>
-        </AnimatePresence>
+      <div className="container">
+        <div className="grid-container">
+          <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
+              <Route path="/" element={<HomePage variants={pageVariants} transition={pageTransition} />} />
+              <Route path="/predict" element={<PredictPage variants={pageVariants} transition={pageTransition} />} />
+              <Route path="/market" element={<MarketPage variants={pageVariants} transition={pageTransition} />} />
+              <Route path="/cargo" element={<CargoPage variants={pageVariants} transition={pageTransition} />} />
+            </Routes>
+          </AnimatePresence>
+        </div>
       </div>
-    </div>
   );
 }
 

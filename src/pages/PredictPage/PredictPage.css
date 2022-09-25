@@ -16,6 +16,7 @@
 
 .file-upload-container {
   width: 430px;
+  height:460px;
   border: 2px solid var(--color_4);
   background: #fff;
   display: flex;
@@ -100,7 +101,8 @@
 
 /* ===================================================================================================== */
 
-.instructions-container,.predictions-container {
+.instructions-container,
+.predictions-container {
   width: 530px;
   max-height: 670px;
   background: #fff;
@@ -114,7 +116,13 @@
   box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
 }
 .predictions-container {
-  width: max-content
+  width:max-content;
+  max-width: 60%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .instructions-heading {
   width: 100%;
@@ -163,7 +171,7 @@
 
 .prediction-healthy .icons {
   display: flex;
-  gap:30px;
+  gap: 30px;
 }
 
 .prediction-healthy span {
@@ -171,13 +179,27 @@
   color: var(--color_4);
 }
 
-
-.prediction-steps{
+.prediction-steps {
   display: flex;
+  width:max-content;
+  max-width: 100%;
   flex-direction: column;
-  gap:30px;
 }
 
-.prediction-steps .steps-heading{
-font-size:22px
+.prediction-steps .steps-heading {
+  letter-spacing: 2px;
+  font-style: italic;
+  font-size: 22px;
+}
+.steps-container {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.steps-item{
+  background: var(--color_6);
+  padding:5px 10px;
+  font-size: 18px;
 }

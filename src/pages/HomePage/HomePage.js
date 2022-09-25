@@ -19,7 +19,7 @@ const HomePage = ({ variants, transition }) => {
                     <p className='homepage-tagline'>Moving towards a better future by bringing in the change bla bla bla</p>
                     <div className="buttons-container">
                         <Link to="predict"><button className="disease">Predict Disease</button></Link>
-                        <Link><button className="marker">Market</button></Link>
+                        <Link to="market"><button className="marker">Market</button></Link>
                     </div>
                 </div>
                 <div className="right-side">
