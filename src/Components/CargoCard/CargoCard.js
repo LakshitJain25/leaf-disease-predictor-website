@@ -2,8 +2,8 @@ import React from 'react'
 import './CargoCard.css'
 const CargoCard = ({ cargo, setShowOutput }) => {
     const { available_space, from, to, expiry_date, _id } = cargo
-    // const base_url = "https://farmey-server.herokuapp.com/"
-    const base_url = "http://localhost:8080/"
+    const base_url = "https://farmey-server.herokuapp.com/"
+    // const base_url = "http://localhost:8080/"
     const getDate = (date) => {
         const splits = date.split('-')
         const date_string = splits[2].substring(0, 2) + '/' + splits[1] + '/' + splits[0]

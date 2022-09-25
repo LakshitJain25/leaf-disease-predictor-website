@@ -8,6 +8,8 @@ import LoadingBar from '../LoadingBar/LoadingBar';
 const CargoInputModal = ({ setShow }) => {
   const [date, setDate] = useState(new Date())
   const [loading, setLoading] = useState(false)
+    const base_url = "https://farmey-server.herokuapp.com/"
+    // const base_url = "http://localhost:8080/"
 
   const uploadForm = async (e) => {
     // console.log(e)
@@ -18,7 +20,7 @@ const CargoInputModal = ({ setShow }) => {
       dataToSend[field] = e.target[index].value
     })
     setLoading(false)
-    await axios.post("http://localhost:8080/api/cargo/upload", dataToSend)
+    await axios.post(base_url+"api/cargo/upload", dataToSend)
     setShow(false)
   }
 

@@ -7,8 +7,8 @@ import LoadingBar from '../LoadingBar/LoadingBar';
 const CargoShowModal = ({ setShow, id }) => {
   const [cargoData, setCargoData] = useState(null)
   const [loading, setLoading] = useState(false)
-  // const base_url = "https://farmey-server.herokuapp.com/"
-  const base_url = "http://localhost:8080/"
+  const base_url = "https://farmey-server.herokuapp.com/"
+  // const base_url = "http://localhost:8080/"
 
   useEffect(() => {
     const getCargo = async () => {
