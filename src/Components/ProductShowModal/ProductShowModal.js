@@ -35,9 +35,9 @@ const ProductShowModal = ({ setShow, id }) => {
   }
   return (
     <>
-      <div className="loading-container">
-      {loading && <LoadingBar />}
-      </div>
+      {loading && <div className="loading-container">
+        <LoadingBar />
+      </div>}
       {productData && <div className='product-show-modal-container'>
         <div className="close-button" onClick={() => { setShow(null) }}><FontAwesomeIcon icon={faX} /></div>
         <div className="product-show-image-input">

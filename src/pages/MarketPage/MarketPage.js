@@ -28,8 +28,7 @@ const MarketPage = ({ variants, transition }) => {
     useEffect(() => {
         const getProducts = async () => {
             try {
-                const { data } = await axios.get(base_url+'api/product/fetch')
-                console.log(data)
+                const { data } = await axios.get(base_url + 'api/product/fetch')
                 setProducts(data)
             }
             catch (e) {
@@ -47,17 +46,15 @@ const MarketPage = ({ variants, transition }) => {
             </div>
             <div className='market-mega-container'>
                 <Navbar />
-                {showInput && <ProductInputModal setShow={setShowInput} setProducts = {setProducts} products={products}/>}
+                {showInput && <ProductInputModal setShow={setShowInput} setProducts={setProducts} products={products} />}
                 <motion.div className="market-container"
                     initial="out"
                     animate="in"
                     exit="exit"
                     variants={variants}
                     transition={transition}>
-                    {/* <div className="dropdown-container">
-                        Filters
-                        <Select options={options} style={dropdownStyles} searchable={false} color="#314e2e" />
-                    </div> */}
+                    <h2 className='market-heading'>Market</h2>
+
                     <div className="cards-container">
                         {
                             products.map((product, index) => {

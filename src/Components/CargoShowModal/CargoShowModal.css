@@ -25,14 +25,7 @@ input[type="number"] {
     align-items: center;
     animation: fadeInCargoShow 0.9s ease forwards;
 }
-.loading-container{
-    height:100vh;
-    width:100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-}
+
 
 @keyframes fadeInCargoShow {
     0% {

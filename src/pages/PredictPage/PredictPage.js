@@ -45,7 +45,7 @@ const PredictPage = ({ variants, transition }) => {
             }
         }
         loadModel()
-    }, [])
+    }, [model])
 
 
     const readImage = (file) => {
@@ -59,7 +59,7 @@ const PredictPage = ({ variants, transition }) => {
 
     const predict = async (e) => {
         e.preventDefault()
-        if (!image) return
+        if (!image || !model) return
         setProcessing(true)
         try {
             const read_image = await readImage(image)
@@ -97,9 +97,10 @@ const PredictPage = ({ variants, transition }) => {
         <div
             className="predict-mega-container">
             <Navbar />
-            <div className="loading-container">
-                {processing && <LoadingBar />}
-            </div>
+            {processing &&
+                <div className="loading-container">
+                    <LoadingBar />
+                </div>}
             <motion.div className='predict-container'
                 initial="out"
                 animate="in"

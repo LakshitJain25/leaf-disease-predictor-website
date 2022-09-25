@@ -5,23 +5,6 @@ const Navbar = () => {
     const navRef = useRef()
     const burgerRef = useRef()
     const navbarRef = useRef()
-    // useEffect(() => {
-    //     window.addEventListener('scroll', (e) => {
-
-
-    //         if (window.scrollY >= 1 && window.scrollY < 88) {
-    //             navRef.current.classList.add("scrolling")
-    //             navRef.current.style.background = "rgba(0,0,0,0.54)"
-    //         }
-    //         else if (window.scrollY > 88) {
-    //             navRef.current.style.background = "rgba(0,0,0,0.87)"
-    //         }
-    //         else {
-    //             navRef.current.classList.remove('scrolling')
-    //             navRef.current.style.background = "transparent"
-    //         }
-    //     })
-    // }, [])
     return (
         <div className='navbar-container'>
             <div className="logo-container">

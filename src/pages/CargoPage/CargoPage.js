@@ -38,13 +38,15 @@ const CargoPage = ({ variants, transition }) => {
             </div>
             <div className='market-mega-container'>
                 <Navbar />
-                {showInput && <CargoInputModal setShow={setShowInput} setCargos={setCargos} cargos={cargos}/>}
+                {showInput && <CargoInputModal setShow={setShowInput} setCargos={setCargos} cargos={cargos} />}
+
                 <motion.div className="market-container"
                     initial="out"
                     animate="in"
                     exit="exit"
                     variants={variants}
                     transition={transition}>
+                    <h2 className='market-heading'>Cargo</h2>
                     <div className="cards-container">
                         {
                             cargos.map((cargo, index) => {

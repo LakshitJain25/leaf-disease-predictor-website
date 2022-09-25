@@ -27,7 +27,9 @@ const CargoInputModal = ({ setShow, setCargos, cargos }) => {
 
   return (
     <div className='cargo-modal-container'>
-      {loading && <LoadingBar />}
+      {loading && <div className="loading-container">
+        <LoadingBar />
+      </div>}
       <div className="close-button" onClick={() => { setShow(false) }}><FontAwesomeIcon icon={faX} /></div>
       <div className="cargo-input-container">
         <form action="" className="input-form" onSubmit={(e) => {

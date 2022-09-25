@@ -35,9 +35,9 @@ const CargoShowModal = ({ setShow, id }) => {
   }
   return (
     <>
-      <div className="loading-container">
-        {loading && <LoadingBar />}
-      </div>
+      {loading && <div className="loading-container">
+        <LoadingBar />
+      </div>}
       {cargoData && <div className='cargo-show-modal-container'>
         <div className="close-button" onClick={() => { setShow(null) }}><FontAwesomeIcon icon={faX} /></div>
         <div className="product-show-input-container">
