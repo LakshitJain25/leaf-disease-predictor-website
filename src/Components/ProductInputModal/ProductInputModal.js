@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './ProductInputModal.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import DatePicker from 'react-date-picker'
-import { faX } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faX } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios'
 import LoadingBar from './../LoadingBar/LoadingBar';
 const ProductInputModal = ({ setShow, setProducts, products }) => {
@@ -91,7 +91,7 @@ const ProductInputModal = ({ setShow, setProducts, products }) => {
           uploadForm(e)
         }}>
           <div className="producer-name input-area">
-            <label htmlFor="producer-name">Your Name </label>
+            <label htmlFor="producer-name">Your Name</label>
             <input type="text" placeholder='your name..' id='producer-name' required />
           </div>
           <div className="producer-number input-area">

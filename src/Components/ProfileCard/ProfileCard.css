@@ -29,7 +29,7 @@
     font-style: italic;
 }
 
-.icons {
+.profile-icons {
     position: absolute;
     bottom: 0;
     color: white;
@@ -39,11 +39,11 @@
     justify-content: center;
     gap: 10px;
 }
-.icons a {
+.profile-icons a {
     color: var(--color_1);
     font-size: 30px;
 }
-.icons img {
+.profile-icons img {
     height: 40px;
     width: 40px;
 }

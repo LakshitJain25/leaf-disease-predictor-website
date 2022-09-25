@@ -15,17 +15,17 @@ const AboutUsPage = ({ variants, transition }) => {
 
         {
             name: "Anjali Gupta",
-            email: "anjali@gmail.com",
+            email: "anjaligupta4920@gmail.com",
             role: "UI/UX Designer",
             github: "/",
             linkedin: "/"
         },
         {
-            name: "Sarveshi Sharma",
-            email: "sarvesh@gmail.com",
-            role: "Presentation Manager",
-            github: "/",
-            linkedin: "/"
+            name: "Sarvesh Sharma",
+            email: "saruboy18@gmail.com",
+            role: "Content Manager",
+            github: "github.com/sa-rvesh",
+            linkedin: "linkedin.com/in/sarvesh-sharma-b010331b5"
         },
         
     ]

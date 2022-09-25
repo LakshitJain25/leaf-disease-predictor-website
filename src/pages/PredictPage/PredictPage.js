@@ -97,6 +97,7 @@ const PredictPage = ({ variants, transition }) => {
         <div
             className="predict-mega-container">
             <Navbar />
+
             {processing &&
                 <div className="loading-container">
                     <LoadingBar />

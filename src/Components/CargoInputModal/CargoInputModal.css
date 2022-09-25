@@ -14,7 +14,6 @@ input[type="number"] {
     background-color: white;
     border-radius: 4px;
     top: 50%;
-
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     border: 2px var(--color_4) solid;
@@ -71,12 +70,15 @@ input[type="number"] {
     justify-content: center;
     align-items: center;
     background-image: url("../../../public/images/photo-1520018627052-cade17c11af8.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     color: white;
     /* background-color: var(--color_6); */
     /* border-left:2px solid var(--color_4); */
 }
 .cargo-input-container .input-form {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     height: max-content;
     display: flex;
     justify-content: center;
@@ -85,7 +87,8 @@ input[type="number"] {
     gap: 10px;
     width: 50%;
     padding:10px;
-    border:2px solid white;
+    box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.65);
+    /* border:2px solid white; */
     flex-wrap: wrap;
 }
 .cargo-input-container .input-area {
@@ -98,6 +101,8 @@ input[type="number"] {
 .cargo-input-container .input-area input {
     padding: 2px 5px;
     font-size: 16px;
+    min-width:300px;
+    height:35px;
     border-radius: 5px;
     border: none;
 }
