@@ -21,7 +21,7 @@ const AboutUsPage = ({ variants, transition }) => {
             linkedin: "/"
         },
         {
-            name: "Sarvesh Sharma",
+            name: "Sarveshi Sharma",
             email: "saruboy18@gmail.com",
             role: "Content Manager",
             github: "github.com/sa-rvesh",
@@ -39,7 +39,7 @@ const AboutUsPage = ({ variants, transition }) => {
                 exit="exit"
                 variants={variants}
                 transition={transition}>
-                <h2 className="profile-heading">Meet Our Team</h2>
+                <h2 className="profile-heading">Meet Our Team (NEURAL MONKS)</h2>
                 <div className="profile-cards">
                     {team.map((member, index) => {
                         return (

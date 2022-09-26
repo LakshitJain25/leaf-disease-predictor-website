@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './ProductInputModal.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import DatePicker from 'react-date-picker'
-import { faPhone, faX } from '@fortawesome/free-solid-svg-icons';
+import { faCloudArrowUp, faPhone, faX } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios'
 import LoadingBar from './../LoadingBar/LoadingBar';
 const ProductInputModal = ({ setShow, setProducts, products }) => {
@@ -75,7 +75,11 @@ const ProductInputModal = ({ setShow, setProducts, products }) => {
       <div className="close-button" onClick={() => { setShow(false) }}><FontAwesomeIcon icon={faX} /></div>
       <div className="product-image-input">
         <div className="product-image-container">
-          {image ? <img src={image} alt="" /> : <p>Please Upload Image</p>}
+          {image ? <img src={image} alt="" /> :
+            <div className='input-image-box'>
+              <FontAwesomeIcon icon={faCloudArrowUp} style={{fontSize:40}}/>
+              <p>Please Upload Image</p>
+            </div>}
         </div>
         <label htmlFor="imageInput">
           <div className='image-upload-button'>Upload</div>

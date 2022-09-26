@@ -53,7 +53,7 @@ const MarketPage = ({ variants, transition }) => {
                     exit="exit"
                     variants={variants}
                     transition={transition}>
-                    <h2 className='market-heading'>Market</h2>
+                    <h2 className='market-heading'>Manure Market</h2>
 
                     <div className="cards-container">
                         {

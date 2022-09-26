@@ -17,7 +17,7 @@ const Navbar = () => {
                     <Link to="/predict"
                         style={{ textDecoration: "none" }} ><li className='navbar-item'>Prediction</li></Link>
                     <Link to="/market"
-                        style={{ textDecoration: "none" }} ><li className='navbar-item'>Market</li></Link>
+                        style={{ textDecoration: "none" }} ><li className='navbar-item'>Manure Market</li></Link>
                     <Link to="/cargo"
                         style={{ textDecoration: "none" }} ><li className='navbar-item'>Cargo</li></Link>
                     <Link to="/aboutus"

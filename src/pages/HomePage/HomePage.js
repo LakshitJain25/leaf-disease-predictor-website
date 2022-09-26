@@ -15,11 +15,11 @@ const HomePage = ({ variants, transition }) => {
                 variants={variants}
                 transition={transition}>
                 <div className="left-side">
-                    <h1 className="homepage-heading">Proper greening & smart solutions</h1>
-                    <p className='homepage-tagline'>A Portal to help farmers practice farming in a more sustainable manner</p>
+                    <h1 className="homepage-heading">LET'S GO FOR GREENER TOMORROW</h1>
+                    <p className='homepage-tagline'>We aim to encorporate circular economy in farming for a greener tomorrow</p>
                     <div className="buttons-container">
                         <Link to="predict"><button className="disease">Predict Disease</button></Link>
-                        <Link to="market"><button className="marker">Market</button></Link>
+                        <Link to="market"><button className="marker">Manure Market</button></Link>
                     </div>
                 </div>
                 <div className="right-side">
