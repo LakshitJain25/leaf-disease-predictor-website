@@ -22,8 +22,9 @@ const MarketPage = ({ variants, transition }) => {
     const [showInput, setShowInput] = useState(false)
     const [showOutput, setShowOutput] = useState(null)
     const [products, setProducts] = useState([])
-    const base_url = "https://farmey-server.herokuapp.com/"
+    // const base_url = "https://farmey-server.herokuapp.com/"
     // const base_url = "http://localhost:8080/"
+    const base_url = "https://lapis-dusty-eel.glitch.me/"
 
     useEffect(() => {
         const getProducts = async () => {

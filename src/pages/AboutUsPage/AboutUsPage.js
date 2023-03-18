@@ -11,22 +11,7 @@ const AboutUsPage = ({ variants, transition }) => {
             role: "Web Developer/ML Engineer",
             github: "http://github.com/lakshitjain25",
             linkedin: "/"
-        },
-
-        {
-            name: "Anjali Gupta",
-            email: "anjaligupta4920@gmail.com",
-            role: "UI/UX Designer",
-            github: "/",
-            linkedin: "/"
-        },
-        {
-            name: "Sarveshi Sharma",
-            email: "saruboy18@gmail.com",
-            role: "Content Manager",
-            github: "github.com/sa-rvesh",
-            linkedin: "linkedin.com/in/sarvesh-sharma-b010331b5"
-        },
+        }
         
     ]
     return (
@@ -39,7 +24,7 @@ const AboutUsPage = ({ variants, transition }) => {
                 exit="exit"
                 variants={variants}
                 transition={transition}>
-                <h2 className="profile-heading">Meet Our Team (NEURAL MONKS)</h2>
+                <h2 className="profile-heading">End to End Machine Learning project</h2>
                 <div className="profile-cards">
                     {team.map((member, index) => {
                         return (

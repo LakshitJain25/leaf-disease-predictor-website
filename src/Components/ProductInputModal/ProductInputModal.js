@@ -11,8 +11,10 @@ const ProductInputModal = ({ setShow, setProducts, products }) => {
   const [date, setDate] = useState(new Date())
   const [loading, setLoading] = useState(false)
 
-  const base_url = "https://farmey-server.herokuapp.com/"
+  // const base_url = "https://farmey-server.herokuapp.com/"
   // const base_url = "http://localhost:8080/"
+  const base_url = "https://lapis-dusty-eel.glitch.me/"
+
 
   const readImage = (file) => {
     return new Promise((rs, rj) => {

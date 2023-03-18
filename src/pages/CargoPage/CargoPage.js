@@ -14,8 +14,9 @@ const CargoPage = ({ variants, transition }) => {
     const [showInput, setShowInput] = useState(false)
     const [showOutput, setShowOutput] = useState(null)
     const [cargos, setCargos] = useState([])
-    const base_url = "https://farmey-server.herokuapp.com/"
+    // const base_url = "https://farmey-server.herokuapp.com/"
     // const base_url = "http://localhost:8080/"
+    const base_url = "https://lapis-dusty-eel.glitch.me/"
 
     useEffect(() => {
         const getCargos = async () => {
@@ -24,7 +25,7 @@ const CargoPage = ({ variants, transition }) => {
                 setCargos(data)
             }
             catch (e) {
-                console.log(e)
+                console.log("Get Cargos ",e)
             }
         }
         getCargos()

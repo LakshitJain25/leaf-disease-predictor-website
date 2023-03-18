@@ -4,8 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTruck } from '@fortawesome/free-solid-svg-icons'
 const CargoCard = ({ cargo, setShowOutput }) => {
     const { available_space, from, to, expiry_date, _id } = cargo
-    const base_url = "https://farmey-server.herokuapp.com/"
+    // const base_url = "https://farmey-server.herokuapp.com/"
     // const base_url = "http://localhost:8080/"
+    const base_url = "https://lapis-dusty-eel.glitch.me/"
     const maps = ['route1.png', 'route.png', 'route2.png']
     const mapIndex = parseInt(Math.random() * maps.length)
     console.log(mapIndex)
